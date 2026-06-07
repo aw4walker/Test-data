@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tv>
+  <channel id="KungFuLive.tv">
+    <display-name>KUNG FU Live</display-name>
+  </channel>
+  <programme start="20260607024136 +0000" stop="20260607044136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 1</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260607044136 +0000" stop="20260607064136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 2</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260607064136 +0000" stop="20260607084136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 3</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260607084136 +0000" stop="20260607104136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 4</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260607104136 +0000" stop="20260607124136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 5</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260607124136 +0000" stop="20260607144136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 6</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260607144136 +0000" stop="20260607164136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 7</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260607164136 +0000" stop="20260607184136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 8</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260607184136 +0000" stop="20260607204136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 9</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260607204136 +0000" stop="20260607224136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 10</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260607224136 +0000" stop="20260608004136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 11</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260608004136 +0000" stop="20260608024136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 12</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260608024136 +0000" stop="20260608044136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 13</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260608044136 +0000" stop="20260608064136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 14</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260608064136 +0000" stop="20260608084136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 15</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260608084136 +0000" stop="20260608104136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 16</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260608104136 +0000" stop="20260608124136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 17</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260608124136 +0000" stop="20260608144136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 18</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260608144136 +0000" stop="20260608164136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 19</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260608164136 +0000" stop="20260608184136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 20</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260608184136 +0000" stop="20260608204136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 21</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260608204136 +0000" stop="20260608224136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 22</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260608224136 +0000" stop="20260609004136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 23</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+  <programme start="20260609004136 +0000" stop="20260609024136 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block 24</title>
+    <desc lang="en">Non-stop classic kung fu cinema, martial arts action movies, and combat showcase blocks.</desc>
+  </programme>
+</tv>
