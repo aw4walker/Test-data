@@ -1,20 +1,3 @@
-from datetime import datetime, timedelta, timezone
-now = datetime.now(timezone.utc)
-minutes = (now.minute // 20) * 20
-start = now.replace(minute=minutes, second=0, microsecond=0)
-titles = ['Classic Martial Arts Block','Kung Fu Cinema Hour','Martial Arts Showcase','Action Block','Combat Classics','Eastern Warriors','Kung Fu Theater','Martial Arts Marathon']
-lines = ['<?xml version=\"1.0\" encoding=\"utf-8\"?>','<tv>','  <channel id=\"KungFuLive.tv\">','    <display-name>KUNG FU Live</display-name>','  </channel>']
-t = start
-for i in range(108):
-    title = titles[i % len(titles)]
-    t_start = t.strftime('%Y%m%d%H%M%S +0000')
-    t_end = (t + timedelta(minutes=20)).strftime('%Y%m%d%H%M%S +0000')
-    lines += [f'  <programme start=\"{t_start}\" stop=\"{t_end}\" channel=\"KungFuLive.tv\">',f'    <title lang=\"en\">{title}</title>','    <desc lang=\"en\">Non-stop classic kung fu cinema and martial arts action.</desc>','  </programme>']
-    t += timedelta(minutes=20)
-lines.append('</tv>')
-print('\n'.join(lines))
-" > /tmp/kungfu_full.xml && echo "Lines: $(wc -l < /tmp/kungfu_full.xml)" && cat /tmp/kungfu_full.xml
-Lines: 438
 <?xml version="1.0" encoding="utf-8"?>
 <tv>
   <channel id="KungFuLive.tv">
