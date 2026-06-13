@@ -1,3 +1,20 @@
+from datetime import datetime, timedelta, timezone
+now = datetime.now(timezone.utc)
+minutes = (now.minute // 20) * 20
+start = now.replace(minute=minutes, second=0, microsecond=0)
+titles = ['Classic Martial Arts Block','Kung Fu Cinema Hour','Martial Arts Showcase','Action Block','Combat Classics','Eastern Warriors','Kung Fu Theater','Martial Arts Marathon']
+lines = ['<?xml version=\"1.0\" encoding=\"utf-8\"?>','<tv>','  <channel id=\"KungFuLive.tv\">','    <display-name>KUNG FU Live</display-name>','  </channel>']
+t = start
+for i in range(108):
+    title = titles[i % len(titles)]
+    t_start = t.strftime('%Y%m%d%H%M%S +0000')
+    t_end = (t + timedelta(minutes=20)).strftime('%Y%m%d%H%M%S +0000')
+    lines += [f'  <programme start=\"{t_start}\" stop=\"{t_end}\" channel=\"KungFuLive.tv\">',f'    <title lang=\"en\">{title}</title>','    <desc lang=\"en\">Non-stop classic kung fu cinema and martial arts action.</desc>','  </programme>']
+    t += timedelta(minutes=20)
+lines.append('</tv>')
+print('\n'.join(lines))
+" > /tmp/kungfu_full.xml && echo "Lines: $(wc -l < /tmp/kungfu_full.xml)" && cat /tmp/kungfu_full.xml
+Lines: 438
 <?xml version="1.0" encoding="utf-8"?>
 <tv>
   <channel id="KungFuLive.tv">
@@ -18,3 +35,421 @@
   <programme start="20260613212000 +0000" stop="20260613214000 +0000" channel="KungFuLive.tv">
     <title lang="en">Action Block</title>
     <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260613214000 +0000" stop="20260613220000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Combat Classics</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260613220000 +0000" stop="20260613222000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Eastern Warriors</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260613222000 +0000" stop="20260613224000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Theater</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260613224000 +0000" stop="20260613230000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Marathon</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260613230000 +0000" stop="20260613232000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260613232000 +0000" stop="20260613234000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Cinema Hour</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260613234000 +0000" stop="20260614000000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Showcase</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614000000 +0000" stop="20260614002000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Action Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614002000 +0000" stop="20260614004000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Combat Classics</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614004000 +0000" stop="20260614010000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Eastern Warriors</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614010000 +0000" stop="20260614012000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Theater</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614012000 +0000" stop="20260614014000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Marathon</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614014000 +0000" stop="20260614020000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614020000 +0000" stop="20260614022000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Cinema Hour</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614022000 +0000" stop="20260614024000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Showcase</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614024000 +0000" stop="20260614030000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Action Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614030000 +0000" stop="20260614032000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Combat Classics</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614032000 +0000" stop="20260614034000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Eastern Warriors</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614034000 +0000" stop="20260614040000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Theater</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614040000 +0000" stop="20260614042000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Marathon</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614042000 +0000" stop="20260614044000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614044000 +0000" stop="20260614050000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Cinema Hour</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614050000 +0000" stop="20260614052000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Showcase</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614052000 +0000" stop="20260614054000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Action Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614054000 +0000" stop="20260614060000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Combat Classics</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614060000 +0000" stop="20260614062000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Eastern Warriors</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614062000 +0000" stop="20260614064000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Theater</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614064000 +0000" stop="20260614070000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Marathon</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614070000 +0000" stop="20260614072000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614072000 +0000" stop="20260614074000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Cinema Hour</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614074000 +0000" stop="20260614080000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Showcase</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614080000 +0000" stop="20260614082000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Action Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614082000 +0000" stop="20260614084000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Combat Classics</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614084000 +0000" stop="20260614090000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Eastern Warriors</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614090000 +0000" stop="20260614092000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Theater</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614092000 +0000" stop="20260614094000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Marathon</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614094000 +0000" stop="20260614100000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614100000 +0000" stop="20260614102000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Cinema Hour</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614102000 +0000" stop="20260614104000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Showcase</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614104000 +0000" stop="20260614110000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Action Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614110000 +0000" stop="20260614112000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Combat Classics</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614112000 +0000" stop="20260614114000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Eastern Warriors</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614114000 +0000" stop="20260614120000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Theater</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614120000 +0000" stop="20260614122000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Marathon</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614122000 +0000" stop="20260614124000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614124000 +0000" stop="20260614130000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Cinema Hour</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614130000 +0000" stop="20260614132000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Showcase</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614132000 +0000" stop="20260614134000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Action Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614134000 +0000" stop="20260614140000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Combat Classics</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614140000 +0000" stop="20260614142000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Eastern Warriors</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614142000 +0000" stop="20260614144000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Theater</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614144000 +0000" stop="20260614150000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Marathon</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614150000 +0000" stop="20260614152000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614152000 +0000" stop="20260614154000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Cinema Hour</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614154000 +0000" stop="20260614160000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Showcase</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614160000 +0000" stop="20260614162000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Action Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614162000 +0000" stop="20260614164000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Combat Classics</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614164000 +0000" stop="20260614170000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Eastern Warriors</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614170000 +0000" stop="20260614172000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Theater</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614172000 +0000" stop="20260614174000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Marathon</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614174000 +0000" stop="20260614180000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614180000 +0000" stop="20260614182000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Cinema Hour</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614182000 +0000" stop="20260614184000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Showcase</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614184000 +0000" stop="20260614190000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Action Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614190000 +0000" stop="20260614192000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Combat Classics</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614192000 +0000" stop="20260614194000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Eastern Warriors</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614194000 +0000" stop="20260614200000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Theater</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614200000 +0000" stop="20260614202000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Marathon</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614202000 +0000" stop="20260614204000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614204000 +0000" stop="20260614210000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Cinema Hour</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614210000 +0000" stop="20260614212000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Showcase</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614212000 +0000" stop="20260614214000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Action Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614214000 +0000" stop="20260614220000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Combat Classics</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614220000 +0000" stop="20260614222000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Eastern Warriors</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614222000 +0000" stop="20260614224000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Theater</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614224000 +0000" stop="20260614230000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Marathon</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614230000 +0000" stop="20260614232000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614232000 +0000" stop="20260614234000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Cinema Hour</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260614234000 +0000" stop="20260615000000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Showcase</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615000000 +0000" stop="20260615002000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Action Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615002000 +0000" stop="20260615004000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Combat Classics</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615004000 +0000" stop="20260615010000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Eastern Warriors</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615010000 +0000" stop="20260615012000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Theater</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615012000 +0000" stop="20260615014000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Marathon</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615014000 +0000" stop="20260615020000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615020000 +0000" stop="20260615022000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Cinema Hour</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615022000 +0000" stop="20260615024000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Showcase</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615024000 +0000" stop="20260615030000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Action Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615030000 +0000" stop="20260615032000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Combat Classics</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615032000 +0000" stop="20260615034000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Eastern Warriors</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615034000 +0000" stop="20260615040000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Theater</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615040000 +0000" stop="20260615042000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Marathon</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615042000 +0000" stop="20260615044000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615044000 +0000" stop="20260615050000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Cinema Hour</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615050000 +0000" stop="20260615052000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Showcase</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615052000 +0000" stop="20260615054000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Action Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615054000 +0000" stop="20260615060000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Combat Classics</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615060000 +0000" stop="20260615062000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Eastern Warriors</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615062000 +0000" stop="20260615064000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Theater</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615064000 +0000" stop="20260615070000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Marathon</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615070000 +0000" stop="20260615072000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Classic Martial Arts Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615072000 +0000" stop="20260615074000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Kung Fu Cinema Hour</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615074000 +0000" stop="20260615080000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Martial Arts Showcase</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+  <programme start="20260615080000 +0000" stop="20260615082000 +0000" channel="KungFuLive.tv">
+    <title lang="en">Action Block</title>
+    <desc lang="en">Non-stop classic kung fu cinema and martial arts action.</desc>
+  </programme>
+</tv>
